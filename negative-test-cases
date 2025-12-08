@@ -1,150 +1,142 @@
-TC-005: Verify Login with empty credentials
+NEGATIVE TEST CASES – SAUCE DEMO WEBSITE
 
-Precondition: User is on login page
+TC-005: Verify Login with Empty Credentials
+-------------------------------------------
+Precondition:
+User is on the login page
 
 Steps:
-
-Leave Username field empty
-
-Leave Password field empty
-
-Click Login
+1. Leave the Username field empty
+2. Leave the Password field empty
+3. Click the Login button
 
 Expected Result:
-Error message is displayed indicating that username is required.
+Error message is displayed indicating that the username is required and login is blocked.
 
 Status: Pass
 
-TC-006: Verify Login with invalid credentials
 
-Precondition: User is on login page
+TC-006: Verify Login with Invalid Credentials
+---------------------------------------------
+Precondition:
+User is on the login page
 
 Steps:
-
-Enter invalid username
-
-Enter invalid password
-
-Click Login
+1. Enter an invalid username
+2. Enter an invalid password
+3. Click the Login button
 
 Expected Result:
 System displays an error message stating that the username and password do not match any user.
 
 Status: Pass
 
-TC-007: Verify Login with locked-out user
 
-Precondition: User is on login page
+TC-007: Verify Login with Locked-Out User
+-----------------------------------------
+Precondition:
+User is on the login page
 
 Steps:
-
-Enter locked-out username
-
-Enter valid password
-
-Click Login
+1. Enter locked-out username
+2. Enter valid password
+3. Click the Login button
 
 Expected Result:
-System displays an error message indicating that the user is locked out.
+System displays an error message indicating that the user has been locked out.
 
 Status: Pass
 
-TC-008: Verify add-to-cart without user login
 
-Precondition: User is not authenticated
+TC-008: Verify Add-to-Cart Without User Authentication
+------------------------------------------------------
+Precondition:
+User is not logged in
 
 Steps:
-
-Navigate directly to the product listing page URL
-
-Click Add to Cart button for any item
+1. Navigate directly to the product listing page URL
+2. Click the Add to Cart button for any product
 
 Expected Result:
-User is redirected to the login page and item is not added to the cart.
+User is redirected to the login page and the item is not added to the cart.
 
 Status: Pass
 
-TC-009: Verify add-to-cart for the same item multiple times
 
-Precondition: User is authenticated and viewing the item list page
+TC-009: Verify Adding the Same Item to Cart Multiple Times
+----------------------------------------------------------
+Precondition:
+User is authenticated and viewing the item list page
 
 Steps:
-
-Select a product
-
-Click Add to Cart button multiple times
+1. Select a product from the item list
+2. Click the Add to Cart button multiple times
 
 Expected Result:
-Item is added only once and cart count does not increase incorrectly.
+Item is added only once and the cart badge displays the correct number of items.
 
 Status: Pass
 
-TC-010: Verify checkout with empty First Name
 
-Precondition: User is authenticated and has items in the cart
+TC-010: Verify Checkout with Empty First Name Field
+---------------------------------------------------
+Precondition:
+User is authenticated and has at least one item in the cart
 
 Steps:
-
-Navigate to My Cart page
-
-Click Checkout
-
-Leave First Name field empty
-
-Enter valid Last Name and Postal Code
-
-Click Continue
+1. Navigate to the My Cart page
+2. Click the Checkout button
+3. Leave the First Name field empty
+4. Enter valid Last Name and Postal Code
+5. Click Continue
 
 Expected Result:
 Error message is displayed indicating that First Name is required and checkout does not proceed.
 
 Status: Pass
 
-TC-011: Verify checkout with empty Postal Code
 
-Precondition: User is authenticated and has items in the cart
+TC-011: Verify Checkout with Empty Postal Code
+----------------------------------------------
+Precondition:
+User is authenticated and has items in the cart
 
 Steps:
-
-Navigate to My Cart page
-
-Click Checkout
-
-Enter valid First Name and Last Name
-
-Leave Postal Code empty
-
-Click Continue
+1. Navigate to the My Cart page
+2. Click Checkout
+3. Enter valid First Name and Last Name
+4. Leave the Postal Code field empty
+5. Click Continue
 
 Expected Result:
 Error message is displayed indicating that Postal Code is required and checkout is blocked.
 
 Status: Pass
 
-TC-012: Verify checkout with empty cart
 
-Precondition: User is authenticated and cart is empty
+TC-012: Verify Checkout with Empty Cart
+---------------------------------------
+Precondition:
+User is authenticated and cart is empty
 
 Steps:
-
-Navigate to My Cart page
-
-Click Checkout
+1. Navigate to the My Cart page
+2. Click the Checkout button
 
 Expected Result:
 System prevents checkout and displays a message indicating that the cart is empty.
 
 Status: Pass
 
-TC-013: Verify user session after logout
 
-Precondition: User is logged in
+TC-013: Verify Session Handling After Logout
+---------------------------------------------
+Precondition:
+User is logged in
 
 Steps:
-
-Click Logout
-
-Press browser Back button
+1. Click the Logout option
+2. Press the browser Back button
 
 Expected Result:
 User remains logged out and restricted pages are not accessible.
