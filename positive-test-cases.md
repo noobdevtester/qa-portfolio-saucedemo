@@ -1,4 +1,4 @@
-## Test Cases – Sauce Demo
+## Positive Test Cases – Sauce Demo
 
 TC-001: Verify Sign-Up with valid credentials
 **Precondition:** User is on sign-up page  
